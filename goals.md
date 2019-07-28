@@ -3,7 +3,7 @@
 "the primary focus of the language will simply be usability.
 no weird obsessions with function purity nor some sense of 'simplicity'.
 
-The language should do as much as possible without getting in your way or adding too much unnessessary overhead." ~ Eva
+The language should do as much as possible without getting in your way or adding too much unnecessary overhead." ~ Eva
 
 ## tech
 
@@ -61,7 +61,7 @@ it could look like the above
 
 ## const by default
 
-while it can be annoying it can save you from enough careless mistakes to be worth while. the other factor to consider is that const by default is easier to optimize for.
+while it can be annoying it can save you from enough careless mistakes to be worthwhile. the other factor to consider is that const by default is easier to optimize for.
 
 ## type bound functions
 
@@ -69,11 +69,11 @@ while there is no oop being able to call a method for a specific type is very co
 
 ## patterns
 
-while regex support sounds nice the standards of which there are many are a mess and as such making chosing one difficult. with the c abi pcre2 can be used but for native support the ideal situation would be to have a context free grammar to achieve a similar purpose.
+while regex support sounds nice the standards of which there are many are a mess and as such making choosing one difficult. with the c abi pcre2 can be used but for native support the ideal situation would be to have a context free grammar to achieve a similar purpose.
 
 ## higher order math
 
-TODO eva expand uppon this
+TODO eva expand upon this
 
 ## LINQ and native sql
 
