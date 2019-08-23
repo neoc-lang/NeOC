@@ -1,0 +1,48 @@
+- hint (nowrap, hints) {scope}
+  - basically better pragmas for direct compiler hints
+- disallow name collisions for functions or globals
+  - sharing names just makes it more likely to make mistakes
+- disallow shadowing
+  - we can change it later but lets just not for now
+- arbitrary scopes
+  - more scopes is always better
+- special syntax for scopes to allow shadowing
+  - almost like a c++ lambda a possibility is to allow some syntax to explicity shadow/access restrict identifiers for a scope
+- namespaces to be only a directive not a scope
+  - no definitive conclusion was reached with this but it was the possibility of doing a namespace like `namespace foo;` and having that cascade instead of needing a scope
+- inference for lambda params
+  - for functions its error prone for lambdas all possible values are already trivially known types
+- type inference where convenient and doesnt make parsing hell
+  - basically limited auto with the `var` syntax
+- void is just struct void {};
+  - void is weird this is what we'll do for now
+- no interpolated strings inside of interpolated strings
+  - this could get out of hand otherwise
+- `/regex/` in match
+  - llvm already provides regex so why not include it in match natively
+- `$` is a modifier for both strings and functions
+  - make them interpolated or function as operators respectively
+  - as `$` already represents alt behavior it makes sense to have it used for both strings and functions to remain consistent
+- `!` to suppress unwrapping or errors
+  - basically like rust's unsafe
+  - syntax wasnt concretely determined
+- goto down a scope but not up one. no crossing function boundries
+  - borrow checking is hell for cross function goto. if you need absolute jumps we should use inline ASM
+- for ... else ... catch
+  - for no break and break handling respectively
+- repeat
+  - basically like continue but without the increment
+- no pre/post inc/dec
+  - just use += 1 and now theres not UB about evaluation order
+- project index file
+  - less a language feature more just a good way to make the compilation fast
+  - in the output dir create an index file to allow us to support incremental builds and store a parsed AST
+- if else expressions in assignment
+  - u32 foo = if (bar) baz; else bang;
+- static blocks for first time memory initialization
+  - static {//only runs on first call of the function}
+- fence blocks for memory barriers
+  - fence {//memory barriers natively supported}
+  - possibly make this a hint as its a rather niche use case (could also do static as a hint)
+- custom allocators via optional type param
+  - basically what c++ does too
