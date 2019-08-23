@@ -46,3 +46,5 @@
   - possibly make this a hint as its a rather niche use case (could also do static as a hint)
 - custom allocators via optional type param
   - basically what c++ does too
+- pure
+  - used in the same way const was for c++ functions but denotes pure functions
