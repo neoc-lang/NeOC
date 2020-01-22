@@ -48,3 +48,7 @@
   - basically what c++ does too
 - pure
   - used in the same way const was for c++ functions but denotes pure functions
+- variants are special as their members are types that follow a few special rules:
+  - 1) a member can/will be implicitly cast to the parent variant
+  - 2) a variant cannot be cast to a member (or at least not without a fight)
+  - 3) rule 2 is invalid inside an if or match that checks the type of the variant
